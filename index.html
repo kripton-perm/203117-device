@@ -5,21 +5,29 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+  	
+  	<h1 class="visually-hidden">Интернет-магазин Device</h1>
 
   	<header class="page-header">
+    
+  		<span class="header-title">Device</span>
   		
-  		<h1 class="header-title">Device</h1>
-  		
-  		<div class="user-block">
+  		<section class="header-user-block">
+     		<h2 class="visually-hidden">Пользовательский блок</h2>
+     
   			<form action="#" method="get" class="header-search-form">
-  			<input type="text" id="header-search" name="header-search" placeholder="Поиск по сайту">
-  			<label for="header-search" class="visually-hidden">Поиск по сайту</label>
-  		</form>
-  			<span class="user-name"></span>
-  			<a href="#" class="user-out">Войти</a>
-  			<a href="#" class="user-compare">Сравнить</a>
-  			<a href="#" class="user-cart">Корзина</a>
-  		</div>
+  				<input type="text" id="header-search" name="header-search" placeholder="Поиск по сайту">
+  				<label for="header-search" class="visually-hidden">Поиск по сайту</label>
+  			</form>
+  			<div class="header-user-login">
+  				<a class="user-name"></a>
+  				<a href="#" class="user-out">Войти</a>
+  			</div>
+  			<div class="header-user-actions">
+  				<a href="#" class="user-compare">Сравнить</a>
+  				<a href="#" class="user-cart">Корзина</a>
+  			</div>
+  		</section>
   		
   		<nav class="header-menu">
   			<h2 class="visually-hidden">Главное меню</h2>
@@ -28,7 +36,7 @@
   					<a href="#">Каталог товаров</a>
   					<ul class="secondary-menu-list">
   						<li class="secondary-menu-item"><a href="#">Виртуальная реальность</a></li>
-  						<li class="secondary-menu-item"><a href="catalog.html">Моноподы для селфи</a></li>
+  						<li class="secondary-menu-item"><a href="catalog-monopodes.html">Моноподы для селфи</a></li>
   						<li class="secondary-menu-item"><a href="#">Экшн-камеры</a></li>
   					</ul>
 						<ul class="secondary-menu-list">
@@ -120,22 +128,22 @@
   			
   			<ul class="product-list">
   				<li class="product-item">
-  					<h3>Виртуальная реальность</h3>
+  					<h3><a href="#">Виртуальная реальность</a></h3>
   				</li>
   				<li class="product-item">
-  					<h3>Моноподы для селфи</h3>
+  					<h3><a href="catalog-monopodes.html">Моноподы для селфи</a></h3>
   				</li>
   				<li class="product-item">
-  					<h3>Экшн-камеры</h3>
+  					<h3><a href="#">Экшн-камеры</a></h3>
   				</li>
   				<li class="product-item">
-  					<h3>Фитнес-браслеты</h3>
+  					<h3><a href="#">Фитнес-браслеты</a></h3>
   				</li>
   				<li class="product-item">
-  					<h3>Умные часы</h3>
+  					<h3><a href="#">Умные часы</a></h3>
   				</li>
   				<li class="product-item">
-  					<h3>Квадрокоптеры</h3>
+  					<h3><a href="#">Квадрокоптеры</a></h3>
   				</li>
   			</ul>
   			
@@ -209,6 +217,39 @@
   			
   	</main>
   	
+  	<section class="modal modal-feedback">
+  		
+    	<h2 class="visually-hidden">Форма для связи</h2>
+    	
+    	<form action="#" class="feedback-form" method="post">
+    		
+    		<p class="feedback-form-input">
+    			<label for="name">Ваше имя:</label>
+    			<input type="text" name="name" placeholder="Представьтесь, пожалуйста" id="name">
+    		</p>
+    		<p class="feedback-form-input">
+    			<label for="mail">Ваш email:</label>
+    			<input type="email" name="mail" placeholder="Для отправки ответа" id="mail">
+    		</p>
+    		<p class="feedback-form-text">
+    			<label for="text">Текст письма:</label>
+    			<textarea id="text">В свободной форме</textarea>
+    		</p>
+    		<button class="btn feedback-form-btn" type="submit">Отправить</button>
+    		<span class="modal-close">x</span>
+    		
+    	</form>
+    
+  	</section>
+  	
+  	<section class="modal modal-map">
+    	
+    	<h2 class="visually-hidden">Наш адрес на карте</h2>
+    	
+    	<span class="modal-close">x</span>
+    	
+    </section>
+  	
   	<footer class="page-footer">
   		<b class="footer-title">Device</b>
   		<div class="footer-user-block">
@@ -217,18 +258,17 @@
   			<a href="#" class="footer-cart">Корзина</a>
   		</div>
   		<span class="footer-address">г. Москва, ул. Строителей, 15</span>
-  		<ul class="footer-menu">
+  		<ul class="footer-menu-list">
   			<li class="footer-menu-item"><a href="#">Доставка</a></li>
   			<li class="footer-menu-item"><a href="#">Гарантия</a></li>
   			<li class="footer-menu-item"><a href="#">Контакты</a></li>
   		</ul>
   		<span class="footer-phone">Тел.: +7 (495) 495-95-95</span>
+  		<h2 class="visually-hidden">Device в социальных сетях</h2>
   		<ul class="footer-social">
-  			<li class="social social-fb">
-  				<p class="visually-hidden">Мы есть в социальных сетях:</p>
-  				<a href="#"> в Фэйсбуке,</a></li>
-  			<li class="social social-in"><a href="#">в Инстаграме</a></li>
-  			<li class="social social-tw"><a href="#">и в Твиттере</a></li>
+  			<li class="social social-fb"><a href="#">Фэйсбук</a></li>
+  			<li class="social social-in"><a href="#">Инстаграм</a></li>
+  			<li class="social social-tw"><a href="#">Твиттер</a></li>
   		</ul>
   		<a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright"><img src="img/htmlacademylogo.png" alt="HTMLAcademy"></a>
   	</footer>
