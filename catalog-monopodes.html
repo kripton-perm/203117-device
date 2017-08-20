@@ -8,31 +8,30 @@
   <body>
   	<h1 class="visually-hidden">Интернет-магазин новейших гаджетов Device</h1>
   	<header class="main-header container">
-    	<p class="main-logo main-header-logo"><a href="index.html">Device</a></p>
+    	<p class="main-logo main-header-logo"><a>Device</a></p>
   		<section class="main-header-user-block">
     		<h2 class="visually-hidden">Пользовательский блок</h2>
      		<form action="#" method="get" class="main-header-search-form">
-     			<h3 class="visually-hidden">Поиск по сайту</h3>
-					<textarea id="header-search" name="header-search" placeholder="Поиск по сайту"></textarea>
+     			<label for="header-search" class="visually-hidden">Поиск по сайту</label>
+     			<textarea id="header-search" name="header-search" placeholder="Поиск по сайту"></textarea>
 					<button class="btn header-search-btn" type="submit">Найти</button>
   			</form>
   			<ul class="main-header-user-actions-list">
   				<li class="main-header-user-actions-item">
-  					<h3 class="visually-hidden">Личный кабинет</h3>
   					<ul class="main-header-user-login-list">
   						<li class="main-header-user-login-item">
   							<a class="main-header-user-name" href="#">Валентин Петухов</a>
   						</li>
   						<li class="main-header-user-login-item">
-  							<a href="#" class="main-header-user-in">Выйти</a>
+  							<a href="#" class="main-header-user user-in">Выйти</a>
   						</li>
   					</ul>
   				</li>
   				<li class="main-header-user-actions-item">
-  					<a href="#" class="main-header-user-compare"><h3>Сравнить</h3></a>
+  					<a href="#" class="main-header-user-compare">Сравнить</a>
   				</li>
   				<li class="main-header-user-actions-item">
-  					<a href="#" class="main-header-user-cart"><h3>Корзина</h3></a>
+  					<a href="#" class="main-header-user-cart">Корзина</a>
   				</li>
   			</ul>
   		</section>
@@ -40,7 +39,7 @@
   			<h2 class="visually-hidden">Главное меню</h2>
   			<ul class="main-header-navigation-list">
   				<li class="main-header-navigation-item">
-  					<a href="#"><h3>Каталог товаров</h3></a>
+  					<a href="#">Каталог товаров</a>
   					<ul class="main-header-secondary-menu-list">
   						<li class="main-header-secondary-menu-item"><a href="#">Виртуальная реальность</a></li>
   						<li class="main-header-secondary-menu-item"><a href="catalog-monopodes.html">Моноподы для селфи</a></li>
@@ -54,9 +53,9 @@
   						<li class="main-header-secondary-menu-item"><a href="#">Квадрокоптеры</a></li>
   					</ul>
   				</li>
-  				<li class="main-header-navigation-item"><a href="#"><h3>Доставка</h3></a></li>
-  				<li class="main-header-navigation-item"><a href="#"><h3>Гарантия</h3></a></li>
-  				<li class="main-header-navigation-item"><a href="#"><h3>Контакты</h3></a></li>
+  				<li class="main-header-navigation-item"><a href="#">Доставка</a></li>
+  				<li class="main-header-navigation-item"><a href="#">Гарантия</a></li>
+  				<li class="main-header-navigation-item"><a href="#">Контакты</a></li>
   			</ul>
   		</nav>
   	</header>
@@ -146,10 +145,10 @@
     		
     		<ul class="sort-controls">
     			<li class="sort-controls-item">
-    				<a href="#" class="sort-up"></a>
+    				<a href="#" class="sort-up">По возрастанию</a>
     			</li>
     			<li class="sort-controls-item sort-controls-item-current">
-    				<a href="#" class="sort-down"></a>
+    				<a href="#" class="sort-down">По убыванию</a>
     			</li>
     		</ul>
     		
@@ -209,8 +208,8 @@
       		    			
       		</ul>
       		<p class="pagination-buttons">
-      			<span class="pagination-back">Назад</span>
-      			<span class="pagination-next">Вперед</span>
+      			<button class="btn pagination-btn pagination-btn-prev" type="button">Назад</button>
+      			<button class="btn pagination-btn pagination-btn-next" type="button">Вперед</button>
       		</p>
       	</div>
       	

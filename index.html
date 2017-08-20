@@ -12,27 +12,26 @@
   		<section class="main-header-user-block">
     		<h2 class="visually-hidden">Пользовательский блок</h2>
      		<form action="#" method="get" class="main-header-search-form">
-     			<h3 class="visually-hidden">Поиск по сайту</h3>
-					<textarea id="header-search" name="header-search" placeholder="Поиск по сайту"></textarea>
+     			<label for="header-search" class="visually-hidden">Поиск по сайту</label>
+     			<textarea id="header-search" name="header-search" placeholder="Поиск по сайту"></textarea>
 					<button class="btn header-search-btn" type="submit">Найти</button>
   			</form>
   			<ul class="main-header-user-actions-list">
   				<li class="main-header-user-actions-item">
-  					<h3 class="visually-hidden">Личный кабинет</h3>
   					<ul class="main-header-user-login-list">
   						<li class="main-header-user-login-item">
   							<a class="main-header-user-name"></a>
   						</li>
   						<li class="main-header-user-login-item">
-  							<a href="#" class="main-header-user-out">Войти</a>
+  							<a href="#" class="main-header-user user-out">Войти</a>
   						</li>
   					</ul>
   				</li>
   				<li class="main-header-user-actions-item">
-  					<a href="#" class="main-header-user-compare"><h3>Сравнить</h3></a>
+  					<a href="#" class="main-header-user-compare">Сравнить</a>
   				</li>
   				<li class="main-header-user-actions-item">
-  					<a href="#" class="main-header-user-cart"><h3>Корзина</h3></a>
+  					<a href="#" class="main-header-user-cart">Корзина</a>
   				</li>
   			</ul>
   		</section>
@@ -40,7 +39,7 @@
   			<h2 class="visually-hidden">Главное меню</h2>
   			<ul class="main-header-navigation-list">
   				<li class="main-header-navigation-item">
-  					<a href="#"><h3>Каталог товаров</h3></a>
+  					<a href="#">Каталог товаров</a>
   					<ul class="main-header-secondary-menu-list">
   						<li class="main-header-secondary-menu-item"><a href="#">Виртуальная реальность</a></li>
   						<li class="main-header-secondary-menu-item"><a href="catalog-monopodes.html">Моноподы для селфи</a></li>
@@ -54,9 +53,9 @@
   						<li class="main-header-secondary-menu-item"><a href="#">Квадрокоптеры</a></li>
   					</ul>
   				</li>
-  				<li class="main-header-navigation-item"><a href="#"><h3>Доставка</h3></a></li>
-  				<li class="main-header-navigation-item"><a href="#"><h3>Гарантия</h3></a></li>
-  				<li class="main-header-navigation-item"><a href="#"><h3>Контакты</h3></a></li>
+  				<li class="main-header-navigation-item"><a href="#">Доставка</a></li>
+  				<li class="main-header-navigation-item"><a href="#">Гарантия</a></li>
+  				<li class="main-header-navigation-item"><a href="#">Контакты</a></li>
   			</ul>
   		</nav>
   	</header>
@@ -72,7 +71,8 @@
   			
   			<ol class="promo-slides-list">
   				<li class="promo-slides-item">
-  					<img src="img/slide1.png" alt="Самая длинная палка для селфи" width="384" height="486">
+       			<h3 class="visually-hidden">Самая длинная палка для селфи</h3>
+       			<img src="img/slide1.png" alt="Самая длинная палка для селфи" width="384" height="486">
   					<b class="slide-title">Делай селфи,<br> как Бен Стиллер!</b>
   					<p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
   					<a href="#" class="slide-detail">Подробнее</a>
@@ -95,6 +95,7 @@
   					</table>
   				</li>
   				<li class="promo-slides-item">
+  					<h3 class="visually-hidden">Мотивирующие фитнес-браслеты</h3>
   					<img src="img/slide2.png" alt="Мотивирующие фитнес-браслеты" width="345" height="485">
   					<b class="slide-title">Худеем правильно!</b>
   					<p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
@@ -114,6 +115,7 @@
   					</table>
   				</li>
   				<li class="promo-slides-item">
+  					<h3 class="visually-hidden">Квадрокоптер с лазером</h3>
   					<img src="img/slide3.png" alt="Квадрокоптер с лазером" width="526" height="334">
   					<b class="slide-title">Порхает как бабочка, жалит как пчела!</b>
   					<p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
@@ -231,10 +233,18 @@
   		<section class="brand-gallery container">
   			<h2 class="visually-hidden">Наши бренды</h2>
   			<ul class="brand-list">
-  				<li class="brand-item"><img src="img/brand1.jpg" alt="Брэнд 1" width="260" height="100"></li>
-  				<li class="brand-item"><img src="img/brand2.jpg" alt="Брэнд 2" width="260" height="100"></li>
-  				<li class="brand-item"><img src="img/brand3.jpg" alt="Брэнд 3" width="260" height="100"></li>
-  				<li class="brand-item"><img src="img/brand4.jpg" alt="Брэнд 4" width="260" height="100"></li>
+  				<li class="brand-item">
+       			<h3 class="visually-hidden">DJI</h3>
+       			<img src="img/brand1.jpg" alt="DJI" width="260" height="100"></li>
+  				<li class="brand-item">
+  					<h3 class="visually-hidden">SP Gadgets</h3>
+  					<img src="img/brand2.jpg" alt="SP Gadgets" width="260" height="100"></li>
+  				<li class="brand-item">
+  					<h3 class="visually-hidden">GoPro</h3>
+  					<img src="img/brand3.jpg" alt="GoPro" width="260" height="100"></li>
+  				<li class="brand-item">
+  					<h3 class="visually-hidden">Vive</h3>
+  					<img src="img/brand4.jpg" alt="Vive" width="260" height="100"></li>
   			</ul>
   		</section>
   		
@@ -283,6 +293,8 @@
     		<span class="modal-close">x</span>
     		
     	</form>
+    	
+    		<button class="btn-close" type="button">Закрыть</button>
     
   		</section>
   		
@@ -290,7 +302,7 @@
     	
     		<h2 class="visually-hidden">Наш адрес на карте</h2>
     		<img src="img/map-big.jpg" alt="Мы находимся по адресу улица Строителей, дом 15" width="994" height="593">
-    		<span class="modal-close">x</span>
+    		<button class="btn-close" type="button">Закрыть</button>
     	
     	</section>
     
