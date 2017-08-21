@@ -323,3 +323,76 @@ ul, ol {
 	margin-right: auto;
 	outline: 1px solid red;
 }
+
+/* Сетка каталога*/
+.catalog-wrapper {
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #fff));
+	background-image: linear-gradient(to right, #efefef 50%, #fff 50%);
+}
+
+
+.catalog-wrapper > .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	background-image: linear-gradient(to right, #efefef 330px, #fff 330px);
+}
+
+.filter {
+	width: 270px;
+	outline: 1px solid red;
+	/*background-color: #efefef;*/
+}
+
+.catalog {
+	margin-top: 100px;
+	width: 760px;
+	outline: 1px solid blue;
+}
+
+.sort {
+	position: absolute;
+	left: 0;
+	right: 0;
+	outline: 1px solid blue;
+	background-color: rgba(0, 0, 0, 0.08);
+}
+
+.sort > .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.sort-and-catalog {
+	width: 760px;
+	margin-right: -60px;
+}
+
+.catalog-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.catalog-item {
+	width: 360px;
+	outline: 1px solid pink;
+}
+
+.catalog > .pagination {
+	background-color: rgba(0, 0, 0, 0.08);
+	margin-bottom: 100px;
+}
+
