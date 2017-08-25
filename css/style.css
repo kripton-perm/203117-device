@@ -18,6 +18,16 @@
 
 /*  1.1 Базовая стилизация всей страницы */
 
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -30,7 +40,7 @@ body {
 	
 	background-color: #ffffff;
 }
-/*
+
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -41,7 +51,7 @@ body {
 	clip: rect(0, 0, 0, 0);
 	overflow: hidden;
 }
-*/
+
 a {
 	text-decoration: none;
 }
@@ -78,6 +88,11 @@ a {
 	background-color: #f7e296;
 }
 
+.logo {
+	margin: 0;
+	padding: 0;
+}
+
 .logo a {
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 48px;
@@ -97,12 +112,10 @@ a {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-
-
 .user-search-form input[type="search"] {
 	background-color: transparent;
 	border: none;
-	outline: 1px solid green;
+	outline: 1px solid black;
 }
 
 .user-search-label {
@@ -152,6 +165,8 @@ a {
 .main-navigation-list,
 .secondary-menu-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .user-actions-list a {
@@ -186,6 +201,11 @@ a {
 	color: rgba(0, 0, 0, 0.6);
 }
 
+.user-actions-item {
+	text-align: right;
+}
+
+
 .main-navigation-list a {
 	color: #000000;
 }
@@ -214,6 +234,8 @@ a {
 .promo-slides-list,
 .slider-controls {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .slide-title {
@@ -249,6 +271,8 @@ a {
 
 .product-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .product-item h3 {
@@ -286,6 +310,8 @@ a {
 .service-buttons,
 .service-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .service-btn {
@@ -320,6 +346,12 @@ a {
 
 .brand-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.brand-item {
+	cursor: pointer;
 }
 
 .brand-item img {
@@ -334,6 +366,8 @@ a {
 
 .about-us-title,
 .contacts-title {
+	margin: 0;
+	padding: 0;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-weight: 900;
 	font-size: 47px;
@@ -343,6 +377,8 @@ a {
 
 .delivery-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .delivery-item {
@@ -367,6 +403,8 @@ a {
 
 .breadcrumbs {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .breadcrumbs a,
@@ -419,6 +457,8 @@ a {
 .filter-color-list,
 .filter-bluetooth-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 } 
 
 .filter-color-option label,
@@ -444,6 +484,8 @@ a {
 .sort-list,
 .sort-controls {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .sort-item a {
@@ -481,6 +523,8 @@ a {
 
 .catalog-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .catalog-item h3 {
@@ -518,6 +562,8 @@ a {
 
 .pagination-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .pagination {
@@ -589,17 +635,17 @@ a {
 	opacity: 0.3;
 }
 
-.user-actions-item a {
+.user-actions-list.in-footer a {
 	color: rgba(255, 255, 255, 0.7);
 	line-height: 36px;
 }
 
-.user-actions-item a:hover,
-.user-actions-item a:focus {
+.user-actions-list.in-footer a:hover,
+.user-actions-list.in-footer a:focus {
 	color: rgba(255, 255, 255, 1);
 }
 
-.user-actions-item a:active {
+.user-actions-list.in-footer a:active {
 	color: rgba(255, 255, 255, 0.3);
 }
 
@@ -618,6 +664,8 @@ a {
 
 .social-buttons {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .social-btn {
@@ -632,7 +680,6 @@ a {
 .social-btn:active {
 	background-color: rgba(255, 255, 255, 0.1);
 }
-
 
 /*  1.6 Базовая стилизация модальных окон */
 
@@ -701,8 +748,8 @@ a {
 
 /*  1.6.2 Базовая стилизация карты */
 
-
-/* Сетка header
+/*  2 Сетка  */
+/*  2.1 Центровщик для всего проекта  */
 
 .container {
 	width: 1160px;
@@ -712,107 +759,104 @@ a {
 	outline: 1px solid aqua;
 }
 
+/*  2.2 Сетка шапки  */
+
 .main-header {
-	background-color: #f7e296;
-	min-height: 188px;
-	padding-left: 60px;
-	padding-right: 60px;
-}
-
-
-.main-header-user-block {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: stretch;
 }
 
-.main-header-navigation {
+.logo.in-header {
 	outline: 1px solid red;
+	align-self: flex-start;
 }
 
-.main-header-navigation-list {
-	display: -webkit-box;
-	display: -ms-flexbox;
+.main-header-user {
 	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	align-items: flex-start;
 }
 
-.main-header-search-form {
+.user-search-form {
 	outline: 1px solid red;
 	width: 200px;
 }
 
-.main-header-user-actions-list {
-	outline: 1px solid red;
+.user-actions-list {
 	width: 500px;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 }
 
-.main-header-user-actions-item {
+.in-header .user-actions-item {
 	width: 120px;
 	outline: 1px solid red;
 }
 
-.main-header-user-actions-item:first-child {
-	-webkit-box-flex: 1;
-	-ms-flex-positive: 1;
+.in-header .user-actions-item:first-child {
 	flex-grow: 1;
 }
 
-.main-header-navigation-item:nth-child(1) {
-	-ms-flex-preferred-size: 240px;
-	flex-basis: 240px;
+.user-login-list {
+	display: flex;
+}
+
+.main-navigation-list {
+	display: flex;
+}
+
+.in-header .main-navigation-item:nth-child(1) {
 	outline: 1px solid green;
-	-webkit-box-flex: 1;
-	-ms-flex-positive: 1;
-	flex-grow: 1;
+	width: 540px;
 }
 
-.main-header-navigation-item:nth-child(2) {
+.in-header .main-navigation-item:nth-child(2) {
 	width: 160px;
 	outline: 1px solid green;
+	align-self: flex-start;
 }
 
-.main-header-navigation-item:nth-child(3) {
+.in-header .main-navigation-item:nth-child(3) {
 	width: 140px;
 	outline: 1px solid green;
+	align-self: flex-start;
 }
 
-.main-header-navigation-item:nth-child(4) {
+.in-header .main-navigation-item:nth-child(4) {
 	width: 140px;
 	outline: 1px solid green;
 	margin-left: 60px;
+	align-self: flex-start;
 }
 
-.main-header-secondary-menu-list {
-	width: 180px;
-	outline: 1px solid yellow;
+.secondary-menu-list {
+	width: 200px;
+	flex-shrink: 0;
+	outline: 1px solid black;
 }
 
-.secondary-flex-container {
-	display: -webkit-box;
-	display: -ms-flexbox;
+.secondary-menu-list:first-child {
+	width: 240px;
+}
+
+.secondary-menu-container {
 	display: flex;
 }
 
-
-/* Сетка main
+/*  2.3 Сетка основного содержимого главной страницы*/
+/*  2.3.1 Сетка промо-слайдера  */
 
 .promo-slider {
+	position: relative;
 	margin-bottom: 100px;
-	outline: 1px solid green;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 .promo-slides-item {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: end;
-	-ms-flex-pack: end;
 	justify-content: flex-end;
 }
 
@@ -837,16 +881,21 @@ a {
 	outline: 1px solid red;
 }
 
+.slider-controls {
+	width: 350px;
+	outline: 1px solid red;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*  2.3.2 Сетка галереи продуктов  */
+
 .product-gallery {
 	margin-bottom: 100px;
 }
 
 .product-list {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin-left: -60px;
 	margin-right: -60px;
@@ -855,24 +904,34 @@ a {
 .product-item {
 	width: 160px;
 	outline: 1px solid red;
-	background-color: #f7e296;
 }
 
+.product-name {
+	margin: 0;
+	padding: 0;
+}
+
+.product-image {
+	width: 160px;
+	height: 160px;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*  2.3.3 Сетка слайдера сервисов  */
+
 .services {
-	background-color: #e5e5e5;
 	margin-bottom: 100px;
 }
 
 .services .container {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
-.service-labels {
+.service-buttons {
 	width: 280px;
 	margin-left: -60px;
 	outline: 1px solid red;
@@ -883,17 +942,25 @@ a {
 	outline: 1px solid blue;
 }
 
+.service-item {
+	padding-right: 280px;
+}
+
+.service-title {
+	margin: 0;
+	padding: 0;
+}
+
+/*  2.3.4 Сетка галереи брэндов */
+
 .brand-gallery {
 	margin-bottom: 100px;
 }
 
 .brand-list {
-	margin: 0 -60px;
-	display: -webkit-box;
-	display: -ms-flexbox;
+	margin-left: -60px;
+	margin-right: -60px;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
@@ -902,14 +969,11 @@ a {
 	outline: 1px solid red;
 }
 
-.flex-container-about {
-	display: -webkit-box;
-	display: -ms-flexbox;
+/*  2.3.5 Сутка блока О НАС и КОНТАКТЫ */
+
+.about-container {
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
-	margin-bottom: 100px;
 }
 
 .about-us {
@@ -924,79 +988,46 @@ a {
 	margin-right: -60px;
 }
 
-/* Сетка footer
-
-.main-footer {
-	padding-top: 60px;
-	padding-bottom: 40px;
-	background-color: #464646;
-}
-
-.main-footer .container {
-	padding: 0;
-	display: -webkit-box;
-	display: -ms-flexbox;
+.about-us,
+.contacts {
 	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	flex-direction: column;
 }
 
-.main-footer-logo {
-	width: 200px;
-	outline: 1px solid white;
-	margin-right: 60px;
+.delivery-list {
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
-.main-footer-user-block {
-	width: 900px;
-	outline: 1px solid white;
+.about-us-btn,
+.contacts-btn {
+	margin-top: auto;
 }
 
-.main-footer-contacts {
-	width: 100%;
+/*  2.4 Сетка основного содержимого внутренних страниц*/
+
+/*  2.4.1 Сетка хлебных крошек*/
+
+.page-title {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
 }
 
-.main-footer-navigation-list {
-	width: 100%;
-}
-
-.footer-social {
-	width: 160px;
-	margin-left: 500px;
-	margin-right: 340px;
-	outline: 1px solid white;
-}
-
-.footer-copyright {
-	width: 160px;
-	outline: 1px solid white;
-}
-
-
-/* Сетка modal-feedback
-.modal-feedback{
-	width: 960px;
-	margin-left: auto;
-	margin-right: auto;
+.breadcrumbs {
 	outline: 1px solid red;
-}
-	
-
-
-/* Сетка modal-map
-.modal-map {
-	width: 994px;
-	margin-left: auto;
-	margin-right: auto;
-	outline: 1px solid red;
+	width: 400px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
 }
 
-/* Сетка каталога
+/*  2.4.2 Сетка фильтра*/
+
 .catalog-wrapper {
 	background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #fff));
 	background-image: linear-gradient(to right, #efefef 50%, #fff 50%);
 }
-
 
 .catalog-wrapper > .container {
 	display: -webkit-box;
@@ -1011,8 +1042,34 @@ a {
 .filter {
 	width: 270px;
 	outline: 1px solid red;
-	/*background-color: #efefef;
+	display: flex;
+	flex-direction: column;
 }
+
+.filter h2 {
+	margin: 0;
+	padding: 0;
+	padding-top: 25px;
+	margin-bottom: 60px;
+}
+
+.filter-cost {
+	outline: 1px solid red;
+	margin-bottom: 50px;
+}
+
+.filter-color,
+.filter-bluetooth {
+	outline: 1px solid red;
+	margin-bottom: 30px;
+}
+
+.filter-color-option,
+.filter-bluetooth-option {
+	padding-left: 30px;
+}
+
+/*  2.4.3 Сетка сортировки и каталога*/
 
 .catalog {
 	margin-top: 100px;
@@ -1024,7 +1081,6 @@ a {
 	position: absolute;
 	left: 0;
 	right: 0;
-	outline: 1px solid blue;
 	background-color: rgba(0, 0, 0, 0.08);
 }
 
@@ -1035,6 +1091,27 @@ a {
 	-webkit-box-pack: end;
 	-ms-flex-pack: end;
 	justify-content: flex-end;
+	align-items: center;
+}
+
+.sort h2 {
+	margin: 0;
+	padding: 0;
+	outline: 1px solid red;
+}
+
+.sort-list {
+	display: flex;
+	width: 300px;
+	outline: 1px solid red;
+	margin-left: 60px;
+}
+
+.sort-controls {
+	width: 60px;
+	outline: 1px solid red;
+	margin-right: -60px;
+	margin-left: 220px;
 }
 
 .sort-and-catalog {
@@ -1056,10 +1133,166 @@ a {
 .catalog-item {
 	width: 360px;
 	outline: 1px solid pink;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	margin-bottom: 40px;
 }
 
-.catalog > .pagination {
-	background-color: rgba(0, 0, 0, 0.08);
-	margin-bottom: 100px;
+.catalog-item-picture {
+	margin-bottom: 40px;
+}
+
+.catalog-item-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.catalog-item-info h3 {
+	margin: 0;
+	padding: 0;
+	outline: 1px solid red;
+	margin-bottom: auto;
+}
+
+.catalog-item:nth-child(2n) h3 {
+	width: 220px;
+}
+
+.pagination {
+	display: flex;
+	justify-content: space-between;
+}
+
+.pagination-list {
+	display: flex;
+}
+
+/*  2.5 Сетка подвала */
+
+.main-footer {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+.main-footer > .container {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-footer-user {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.in-footer.user-actions-list {
+	width: 360px;
+}
+
+.in-footer .user-actions-item {
+	width: 120px;
+	outline: 1px solid red;
+}
+
+
+.main-footer-conditions {
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-footer-conditions .address,
+.main-footer-conditions .phone {
+	margin: 0;
+	padding: 0;
+}
+
+.in-footer.main-navigation-list {
+	flex-grow: 1;
+	justify-content: center;
+}
+
+.in-footer .main-navigation-item {
+	margin-right: 20px;
+}
+
+.in-footer .main-navigation-item:last-child {
+	margin-right: 0;
+}
+
+.main-footer-social::before {
+	
+	content: "";
+	width: 100px;
+	height: 10px;
+	background-color: #ffc600;
+}
+
+.main-footer-social {
+	display: flex;
+	justify-content: space-between;
+}
+
+.social-buttons {
+	width: 200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.copyright {
+	margin: 0;
+	padding: 0;
+	width: 100px;
+	outline: 1px solid red;
+}
+
+/*  2.6 Сетка модальных окон */
+/*  2.6.1 Сетка формы обратной связи */
+
+.modal-feedback{
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	outline: 1px solid red;
+	padding: 90px 100px;
+}
+
+.feedback-form {
+	outline: 1px solid black;
+}
+
+.feedback-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.feedback-input {
+	margin: 0;
+	padding: 0;
+	width: 360px;
+	outline: 1px solid green;
+}
+
+.feedback-input label {
+	display: block;
+}
+
+.feedback-text {
+	outline: 1px solid green;
+}
+
+.feedback-text textarea {
+	width: 100%;
+}
+
+
+/*  2.6.2 Сетка карты */
+
+.modal-map {
+	width: 994px;
+	margin-left: auto;
+	margin-right: auto;
+	outline: 1px solid red;
 }
 
