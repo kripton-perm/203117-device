@@ -14,8 +14,8 @@
   		<section class="main-header-user">
     		<h2 class="visually-hidden">Пользовательский блок</h2>
      		<form action="#" method="get" class="user-search-form">
-     			<input type="search" id="header-search" name="header-search">
-     			<label for="header-search" class="user-search-label">Поиск по сайту</label>
+     			<input type="text" id="header-search" name="header-search" autocomplete="off" value="Поиск по сайту">
+     			<label for="header-search" class="visually-hidden">Поиск по сайту</label>
 					<button class="user-search-btn" type="submit">Найти</button>
   			</form>
   			<ul class="user-actions-list in-header">
@@ -67,7 +67,7 @@
   		<section class="promo-slider container">
   			<h2 class="visually-hidden">Промо-слайдер</h2>
   			<ol class="promo-slides-list">
-  				<li class="promo-slides-item">
+  				<li class="promo-slides-item current-slide">
        			<h3 class="visually-hidden">Самая длинная палка для селфи</h3>
        			<p class="slide-image">
        				<img src="img/slide1.png" alt="Самая длинная палка для селфи" width="384" height="486">
@@ -75,7 +75,6 @@
   					<div class="slide-info">
   						<b class="slide-title">Делай селфи,<br> как Бен Стиллер!</b>
   						<p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-  						<a href="#" class="btn slide-detail-btn">Подробнее</a>
   						<table class="slide-info-table">
   							<caption class="visually-hidden">Характеристики</caption>
   							<thead>
@@ -93,6 +92,7 @@
   								</tr>
   							</tbody>
   						</table>
+  						<a href="#" class="btn slide-detail-btn">Подробнее</a>
   					</div>
   				</li>
   				<li class="promo-slides-item">
@@ -103,7 +103,6 @@
   					<div class="slide-info">
   						<b class="slide-title">Худеем правильно!</b>
   						<p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-  						<a href="#" class="btn slide-detail-btn">Подробнее</a>
   						<table class="slide-info-table">
   							<caption class="visually-hidden">Характеристики</caption>
   							<thead>
@@ -117,6 +116,7 @@
   								</tr>
   							</tbody>
   						</table>
+  						<a href="#" class="btn slide-detail-btn">Подробнее</a>
   					</div>
   				</li>
   				<li class="promo-slides-item">
@@ -127,7 +127,6 @@
   					<div class="slide-info">
   						<b class="slide-title">Порхает как бабочка, жалит как пчела!</b>
   						<p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-  						<a href="#" class="btn slide-detail-btn">Подробнее</a>
   						<table class="slide-info-table">
   							<caption class="visually-hidden">Характеристики</caption>
   							<thead>
@@ -138,17 +137,18 @@
   							</thead>
   							<tbody>
   								<tr>
-  									<td>800 метров</td>
-  									<td>50 метров</td>
+  									<td>800 м</td>
+  									<td>50 м</td>
   								</tr>
   							</tbody>
   						</table>
+  						<a href="#" class="btn slide-detail-btn">Подробнее</a>
   					</div>
   				</li>
   			</ol>
   			<ol class="slider-controls">
 					<li>
-						<button class="slider-btn" type="button">Первый слайд</button>
+						<button class="slider-btn slider-btn-current" type="button">Первый слайд</button>
 					</li>
 					<li>
 						<button class="slider-btn" type="button">Второй слайд</button>
@@ -174,7 +174,7 @@
   						<div class="product-image">
   							<img src="img/popular-2.svg" alt="Моноподы для селфи" width="86" height="117">
   						</div>
-  						<h3 class="product-name">Моноподы для селфи</h3>
+  						<h3 class="product-name">Моноподы <br> для селфи</h3>
   					</a>
   				</li>
   				<li class="product-item">
@@ -226,7 +226,7 @@
   					</li>
   				</ul>
   				<ul class="service-list">
-  					<li class="service-item">
+  					<li class="service-item service-item-current">
   						<h3 class="service-title">Доставка</h3>
   						<p class="service-description">
   							Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
@@ -252,15 +252,19 @@
   			<ul class="brand-list">
   				<li class="brand-item">
        			<h3 class="visually-hidden">DJI</h3>
+       			<div class="brand-overlay"></div>
        			<img src="img/brand1.jpg" alt="DJI" width="260" height="100"></li>
   				<li class="brand-item">
   					<h3 class="visually-hidden">SP Gadgets</h3>
+  					<div class="brand-overlay"></div>
   					<img src="img/brand2.jpg" alt="SP Gadgets" width="260" height="100"></li>
   				<li class="brand-item">
   					<h3 class="visually-hidden">GoPro</h3>
+  					<div class="brand-overlay"></div>
   					<img src="img/brand3.jpg" alt="GoPro" width="260" height="100"></li>
   				<li class="brand-item">
   					<h3 class="visually-hidden">Vive</h3>
+  					<div class="brand-overlay"></div>
   					<img src="img/brand4.jpg" alt="Vive" width="260" height="100"></li>
   			</ul>
   		</section>
@@ -297,9 +301,9 @@
     				    		</p>
     			</div>
     			<p class="feedback-text">
-    			<label for="text">Текст письма:</label>
-    			<textarea id="text" rows="10">В свободной форме</textarea>
-    		</p>
+    				<label for="text">Текст письма:</label>
+    				<textarea id="text" rows="5">В свободной форме</textarea>
+    			</p>
     			<p class="feedback-send">
     			<button class="btn feedback-send-btn" type="submit">Отправить</button>
     		</p>
@@ -308,7 +312,7 @@
     	</section>
   		<section class="modal modal-map">
     		<h2 class="visually-hidden">Наш адрес на карте</h2>
-    		<img src="img/map-big.jpg" alt="Мы находимся по адресу улица Строителей, дом 15" width="994" height="593">
+    		<img src="img/map-big.jpg" alt="Мы находимся по адресу улица Строителей, дом 15" width="960" height="559">
     		<button class="btn-close" type="button">Закрыть</button>
     	</section>
    	</main>
@@ -342,15 +346,16 @@
 				<section class="main-footer-social">
 					<h2 class="visually-hidden">Device в социальных сетях</h2>
 					<ul class="social-buttons">
-  					<li><a class="social-btn social-fb" href="#">Facebook</a></li>
-  					<li><a class="social-btn social-in" href="#">Instagram</a></li>
-  					<li><a class="social-btn social-tw" href="#">Twitter</a></li>
+  					<li class="social-btn social-fb"><a href="#">Facebook</a></li>
+  					<li class="social-btn social-in"><a href="#">Instagram</a></li>
+  					<li class="social-btn social-tw"><a href="#">Twitter</a></li>
   				</ul>
   				<p class="copyright">
-  					<a class="copyright-icon" href="https://htmlacademy.ru/intensive/htmlcss">HTMLAcademy</a>
+  					<a class="copyright-icon" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" alt="HTML Академия" width="27" height="35"></a>
   				</p>
 				</section>
   		</div>
   	</footer>
+  	<script src="js/main.js"></script>
   </body>
 </html>
