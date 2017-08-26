@@ -19,12 +19,14 @@
 /*  1.1 Базовая стилизация всей страницы */
 
 html {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
+	-webkit-box-sizing: inherit;
 	box-sizing: inherit;
 }
 
@@ -64,6 +66,7 @@ a {
 	vertical-align: middle;
 	
 	background-color: transparent;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(33%, transparent), color-stop(33%, #f0c52e), color-stop(66%, #f0c52e), color-stop(66%, transparent));
 	background-image: linear-gradient(to bottom, transparent 33%, #f0c52e 33%, #f0c52e 66%, transparent 66%);
 	border: none;
 }
@@ -439,7 +442,7 @@ a {
 	letter-spacing: 2px;
 }
 
-.filter-cost label,
+.range-name,
 .filter-color legend,
 .filter-bluetooth legend {
 	font-family: "Gilroy", "Arial", sans-serif;
@@ -762,20 +765,35 @@ a {
 /*  2.2 Сетка шапки  */
 
 .main-header {
+	margin-top: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-align: stretch;
+	-ms-flex-align: stretch;
 	align-items: stretch;
 }
 
 .logo.in-header {
 	outline: 1px solid red;
+	-ms-flex-item-align: start;
 	align-self: flex-start;
 }
 
 .main-header-user {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin-bottom: 40px;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
 	align-items: flex-start;
 }
 
@@ -786,6 +804,8 @@ a {
 
 .user-actions-list {
 	width: 500px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -795,14 +815,20 @@ a {
 }
 
 .in-header .user-actions-item:first-child {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
 	flex-grow: 1;
 }
 
 .user-login-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 .main-navigation-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -814,12 +840,14 @@ a {
 .in-header .main-navigation-item:nth-child(2) {
 	width: 160px;
 	outline: 1px solid green;
+	-ms-flex-item-align: start;
 	align-self: flex-start;
 }
 
 .in-header .main-navigation-item:nth-child(3) {
 	width: 140px;
 	outline: 1px solid green;
+	-ms-flex-item-align: start;
 	align-self: flex-start;
 }
 
@@ -827,11 +855,13 @@ a {
 	width: 140px;
 	outline: 1px solid green;
 	margin-left: 60px;
+	-ms-flex-item-align: start;
 	align-self: flex-start;
 }
 
 .secondary-menu-list {
 	width: 200px;
+	-ms-flex-negative: 0;
 	flex-shrink: 0;
 	outline: 1px solid black;
 }
@@ -841,6 +871,8 @@ a {
 }
 
 .secondary-menu-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -850,13 +882,24 @@ a {
 .promo-slider {
 	position: relative;
 	margin-bottom: 100px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
 	align-items: flex-end;
 }
 
 .promo-slides-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
 	justify-content: flex-end;
 }
 
@@ -884,7 +927,11 @@ a {
 .slider-controls {
 	width: 350px;
 	outline: 1px solid red;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
@@ -895,7 +942,11 @@ a {
 }
 
 .product-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin-left: -60px;
 	margin-right: -60px;
@@ -915,8 +966,14 @@ a {
 	width: 160px;
 	height: 160px;
 	margin-bottom: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -927,7 +984,11 @@ a {
 }
 
 .services .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
@@ -960,7 +1021,11 @@ a {
 .brand-list {
 	margin-left: -60px;
 	margin-right: -60px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
@@ -972,7 +1037,11 @@ a {
 /*  2.3.5 Сутка блока О НАС и КОНТАКТЫ */
 
 .about-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
@@ -990,7 +1059,12 @@ a {
 
 .about-us,
 .contacts {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
@@ -1017,7 +1091,11 @@ a {
 .breadcrumbs {
 	outline: 1px solid red;
 	width: 400px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin-bottom: 40px;
 }
@@ -1042,7 +1120,12 @@ a {
 .filter {
 	width: 270px;
 	outline: 1px solid red;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
@@ -1053,13 +1136,22 @@ a {
 	margin-bottom: 60px;
 }
 
-.filter-cost {
+.range-filter {
+	position: relative;
+	width: 200px;
 	outline: 1px solid red;
 	margin-bottom: 50px;
 }
 
+.range-name {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
 .filter-color,
 .filter-bluetooth {
+	position: relative;
 	outline: 1px solid red;
 	margin-bottom: 30px;
 }
@@ -1091,6 +1183,8 @@ a {
 	-webkit-box-pack: end;
 	-ms-flex-pack: end;
 	justify-content: flex-end;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -1101,6 +1195,8 @@ a {
 }
 
 .sort-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 300px;
 	outline: 1px solid red;
@@ -1133,8 +1229,15 @@ a {
 .catalog-item {
 	width: 360px;
 	outline: 1px solid pink;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: column-reverse;
 	flex-direction: column-reverse;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
 	justify-content: flex-end;
 	margin-bottom: 40px;
 }
@@ -1144,7 +1247,11 @@ a {
 }
 
 .catalog-item-info {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
@@ -1160,11 +1267,17 @@ a {
 }
 
 .pagination {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
 .pagination-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -1176,13 +1289,24 @@ a {
 }
 
 .main-footer > .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
 .main-footer-user {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -1197,7 +1321,11 @@ a {
 
 
 .main-footer-conditions {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
@@ -1208,7 +1336,11 @@ a {
 }
 
 .in-footer.main-navigation-list {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
 	flex-grow: 1;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -1229,14 +1361,24 @@ a {
 }
 
 .main-footer-social {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
 .social-buttons {
 	width: 200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -1263,7 +1405,11 @@ a {
 }
 
 .feedback-row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
@@ -1278,12 +1424,18 @@ a {
 	display: block;
 }
 
+.feedback-input input {
+	width: 100%;
+	padding: 20px;
+}
+
 .feedback-text {
 	outline: 1px solid green;
 }
 
 .feedback-text textarea {
 	width: 100%;
+	padding: 20px;
 }
 
 
@@ -1295,4 +1447,80 @@ a {
 	margin-right: auto;
 	outline: 1px solid red;
 }
+
+/*  3 Декоративное оформление*/
+/*  3.4.2 Фильтр цены на странице каталога*/
+
+.range-controls {
+	position: relative;
+	height: 20px;
+	padding-top: 9px;
+}
+
+.range-scale {
+	height: 2px;
+	background-color: #dbdbdb;
+}
+
+.range-bar {
+	width: 70%;
+	height: 2px;
+	background-color: #91c92f;
+}
+
+.range-toggle {
+	position: absolute;
+	top: 0px;
+	left: -6px;
+	width: 20px;
+	height: 20px;
+	border: 8px solid #ffffff;
+	background-color: #ababab;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+	cursor: pointer;
+}
+
+.range-toggle-max {
+	left: 130px;
+}
+
+.min-price,
+.max-price {
+	color: rgba(0, 0, 0, 0.2);
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.max-price {
+	margin-left: 30px;
+}
+
+.price-controls input {
+	border: none;
+	background-color: transparent;
+	color: rgba(0, 0, 0, 0.2);
+	width: 50px;
+}
+
+.price-controls input:focus {
+	color: #000000;
+	outline-color: rgba(0, 0, 0, 0.2);
+}
+
+.range-filter::before,
+.filter-color::before,
+.filter-bluetooth::before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #000000;
+}
+
+
+
 
