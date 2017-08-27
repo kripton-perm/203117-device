@@ -184,12 +184,24 @@ a {
 	color: #000000;
 }
 
-.user-actions-list .user-logout {
+.user-login-item .user-out {
 	color: rgba(0, 0, 0, 0.3);
+	padding-left: 10px;
+}
+
+.user-out:hover,
+.user-out:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.user-out:active {
+	color: rgba(0, 0, 0, 0.1);
 }
 
 .user-actions-item {
 	text-align: right;
+	display: inline-block;
+	font-size: 15px;
 }
 
 .main-navigation-list a {
@@ -417,6 +429,7 @@ a {
 	line-height: 20px;
 	color: #000000;
 	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
 .range-name,
@@ -432,6 +445,8 @@ a {
 .filter-color,
 .filter-bluetooth {
 	border: none;
+	margin: 0;
+	padding: 0;
 }
 
 .filter-color-list,
@@ -446,13 +461,19 @@ a {
 	font-size: 14px;
 	line-height: 40px;
 	color: #000000;
+	padding-left: 40px;
+	cursor: pointer;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .filter-btn {
 	font-size: 18px;
-	line-height: 24px;
+	line-height: 40px;
 	letter-spacing: 2px;
 	font-weight: 900;
+	width: 200px;
+	cursor: pointer;
 }
 
 /*  1.4.3 Базовая стилизация сортировки*/
@@ -721,6 +742,8 @@ a {
 
 .main-header {
 	margin-top: 40px;
+	margin-bottom: 20px;
+	padding-bottom: 170px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -731,6 +754,10 @@ a {
 	-webkit-box-align: stretch;
 	-ms-flex-align: stretch;
 	align-items: stretch;
+}
+
+.inner-page .main-header {
+	padding-bottom: 50px;
 }
 
 .main-content {
@@ -762,9 +789,7 @@ a {
 
 .user-actions-list {
 	width: 500px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+	font-size: 0;
 }
 
 .in-header .user-actions-item {
@@ -772,9 +797,8 @@ a {
 }
 
 .in-header .user-actions-item:first-child {
-	-webkit-box-flex: 1;
-	-ms-flex-positive: 1;
-	flex-grow: 1;
+	width: 260px;
+	text-align: left;
 }
 
 .user-login-list {
@@ -791,6 +815,7 @@ a {
 
 .in-header .main-navigation-item:nth-child(1) {
 	width: 540px;
+	position: relative;
 }
 
 .in-header .main-navigation-item:nth-child(2) {
@@ -827,13 +852,13 @@ a {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	position: relative;
+	position: absolute;
 	z-index: 1;
 	background-color: #f7e296;
 	width: 1160px;
 	margin-left: -60px;
 	padding-left: 60px;
-	padding-bottom: 40px;
+	padding-bottom: 60px;
 }
 
 /*  2.3 Сетка основного содержимого главной страницы*/
@@ -1053,15 +1078,13 @@ a {
 }
 
 .breadcrumbs {
-	outline: 1px solid red;
-	width: 400px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
 	margin-bottom: 40px;
+}
+
+.breadcrumbs li {
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 40px;
 }
 
 /*  2.4.2 Сетка фильтра*/
@@ -1083,7 +1106,6 @@ a {
 
 .filter {
 	width: 270px;
-	outline: 1px solid red;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1103,7 +1125,6 @@ a {
 .range-filter {
 	position: relative;
 	width: 200px;
-	outline: 1px solid red;
 	margin-bottom: 50px;
 }
 
@@ -1116,21 +1137,16 @@ a {
 .filter-color,
 .filter-bluetooth {
 	position: relative;
-	outline: 1px solid red;
+	width: 200px;
 	margin-bottom: 30px;
 }
 
-.filter-color-option,
-.filter-bluetooth-option {
-	padding-left: 30px;
-}
 
 /*  2.4.3 Сетка сортировки и каталога*/
 
 .catalog {
-	margin-top: 100px;
+	margin-top: 140px;
 	width: 760px;
-	outline: 1px solid blue;
 }
 
 .sort {
@@ -1141,6 +1157,7 @@ a {
 }
 
 .sort > .container {
+	min-height: 70px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1154,24 +1171,28 @@ a {
 
 .sort h2 {
 	margin: 0;
+	margin-left: 340px;
 	padding: 0;
-	outline: 1px solid red;
 }
 
 .sort-list {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	width: 300px;
-	outline: 1px solid red;
 	margin-left: 60px;
+}
+
+.sort-item {
+	display: inline-block;
+	margin-right: 30px;
+	vertical-align: top;
+}
+
+.sort-item:last-child {
+	margin-right: 0;
 }
 
 .sort-controls {
 	width: 60px;
-	outline: 1px solid red;
 	margin-right: -60px;
-	margin-left: 220px;
+	margin-left: auto;
 }
 
 .sort-and-catalog {
@@ -1192,7 +1213,6 @@ a {
 
 .catalog-item {
 	width: 360px;
-	outline: 1px solid pink;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1217,13 +1237,27 @@ a {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+	align-items: flex-start;
 }
 
 .catalog-item-info h3 {
 	margin: 0;
 	padding: 0;
-	outline: 1px solid red;
 	margin-bottom: auto;
+}
+
+.catalog-item-info a {
+	display: block;
+	color: #000000;
+}
+
+.catalog-item-info a:hover,
+.catalog-item-info a:focus {
+	opacity: 0.6;
+}
+
+.catalog-item-info a:active {
+	opacity: 0.3;
 }
 
 .catalog-item:nth-child(2n) h3 {
@@ -1231,18 +1265,11 @@ a {
 }
 
 .pagination {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+	text-align: center;
 }
 
-.pagination-list {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+.pagination-item {
+	display: inline-block;
 }
 
 /*  2.5 Сетка подвала */
@@ -1445,23 +1472,49 @@ a {
 
 /*  3.1.2 Декоративные элементы блока пользователя */
 
-.user-login,
-.user-compare,
-.user-cart {
-	padding-left: 25px;
-	background-repeat: no-repeat;
-	background-position: left center;
+.user-login-item {
+	display: inline-block;
+	vertical-align: top;
 }
 
-.user-login {
+.user-actions-item a {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 25px;
+	position: relative;
+}
+
+.user-login::before,
+.user-compare::before,
+.user-cart::before {
+	content: "";
+	position: absolute;
+}
+
+.user-login::before {
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 13px;
+	height: 12px;
 	background-image: url(../img/user-block-login.svg);
 }
 
-.user-compare {
+.user-compare::before {
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 10px;
+	height: 10px;
 	background-image: url(../img/user-block-compare.svg);
 }
 
-.user-cart {
+.user-cart::before {
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 12px;
+	height: 12px;
 	background-image: url(../img/user-block-cart.svg);
 }
 
@@ -1470,13 +1523,22 @@ a {
 .user-compare:hover,
 .user-compare:focus,
 .user-cart:hover,
-.user-cart:focus {
+.user-cart:focus,
+.user-login:hover::before,
+.user-compare:hover::before,
+.user-cart:hover::before,
+.user-login:focus::before,
+.user-compare:focus::before,
+.user-cart:focus::before {
 	opacity: 0.6;
 }
 
 .user-login:active,
 .user-compare:active,
-.user-cart:active {
+.user-cart:active,
+.user-login:active::before,
+.user-compare:active::before,
+.user-cart:active::before {
 	opacity: 0.3;
 }
 
@@ -1505,13 +1567,16 @@ a {
 }
 
 
-
 .secondary-menu-container {
-	opacity: 0;
+	/*opacity: 0;*/
+	display: none;
 }
 
-.main-navigation-item:first-child:hover > .secondary-menu-container {
-	opacity: 1;
+.main-navigation-item:first-child:hover > .secondary-menu-container,
+.main-navigation-item:first-child > a:focus ~ .secondary-menu-container,
+.secondary-checkbox:checked + .secondary-menu-container {
+	/*opacity: 1;*/
+	display: flex;
 }
 
 /*  3.2 Декоративные элементы основного содержимого главной страницы */
@@ -1799,32 +1864,69 @@ a {
 
 /*  3.3 Декоративные элементы подвала */
 
-.in-footer .user-actions-item a {
+.in-footer .user-login,
+.in-footer .user-compare,
+.in-footer .user-cart {
 	padding-left: 25px;
 	background-repeat: no-repeat;
 	background-position: left center;
 	opacity: 0.7;
 }
 
-.in-footer .user-actions-item a:hover,
-.in-footer .user-actions-item a:focus {
+.in-footer .user-login:hover,
+.in-footer .user-compare:hover,
+.in-footer .user-cart:hover,
+.in-footer .user-login:focus,
+.in-footer .user-compare:focus,
+.in-footer .user-cart:focus {
 	opacity: 1;
 }
 
-.in-footer .user-actions-item a:active {
-	opacity: 0.3;
+.in-footer .user-login::before,
+.in-footer .user-compare::before,
+.in-footer .user-cart::before {
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 1;
 }
 
-.in-footer .user-actions-item:nth-child(1) a {
+.in-footer .user-login::before {
+	width: 13px;
+	height: 12px;
 	background-image: url(../img/user-block-login-footer.svg);
 }
 
-.in-footer .user-actions-item:nth-child(2) a {
+.in-footer .user-compare::before {
+	width: 10px;
+	height: 10px;
 	background-image: url(../img/user-block-compare-footer.svg);
 }
 
-.in-footer .user-actions-item:nth-child(3) a {
+.in-footer .user-cart::before {
+	width: 12px;
+	height: 12px;
 	background-image: url(../img/user-block-cart-footer.svg);
+}
+
+.in-footer .user-login:hover::before,
+.in-footer .user-compare:hover::before,
+.in-footer .user-cart:hover::before,
+.in-footer .user-login:focus::before,
+.in-footer .user-compare:focus::before,
+.in-footer .user-cart:focus::before {
+	opacity: 0.6;
+}
+
+.in-footer .user-login:active,
+.in-footer .user-compare:active,
+.in-footer .user-cart:active,
+.in-footer .user-login:active::before,
+.in-footer .user-compare:active::before,
+.in-footer .user-cart:active::before {
+	opacity: 0.3;
 }
 
 .social-btn {
@@ -1867,7 +1969,33 @@ a {
 	opacity: 0.3;
 }
 
+/*  3.4 Декоративные элементы страницы каталога  */
 
+/*  3.4.1 Хлебные крошки*/
+
+.breadcrumbs li {
+	position: relative;
+}
+
+.breadcrumbs li:not(:last-child)::before,
+.breadcrumbs li:not(:last-child)::after {
+	position: absolute;
+	right: 17px;
+	content: "";
+	width: 1px;
+	height: 6px;
+	background-color: #000000;
+}
+
+.breadcrumbs li::after {
+	transform: rotate(45deg);
+	top: 18px;
+}
+
+.breadcrumbs li::before {
+	transform: rotate(-45deg);
+	top: 14px;
+}
 
 /*  3.4.2 Фильтр цены на странице каталога*/
 
@@ -1940,6 +2068,165 @@ a {
 	height: 2px;
 	background-color: #000000;
 }
+
+/* 3.4.3 Фильтр цвета и Bluetooth */
+
+.filter-color-option,
+.filter-bluetooth {
+	position: relative;
+}
+
+.filter-color label {
+	background-image: url(../img/checkbox-off.svg);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.filter-color input[type="checkbox"]:checked + label {
+	background-image: url(../img/checkbox-on.svg);
+}
+
+.filter-bluetooth label {
+	background-image: url(../img/radio-off.svg);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.filter-bluetooth input[type="radio"]:checked + label {
+	background-image: url(../img/radio-on.svg);
+}
+
+.filter-color input[type="checkbox"]:focus + label,
+.filter-bluetooth input[type="radio"]:focus + label {
+	opacity: 0.6;
+}
+
+.filter-color input[type="checkbox"]:active + label,
+.filter-bluetooth input[type="radio"]:active + label {
+	opacity: 1;
+}
+
+.filter-form label:hover {
+	opacity: 0.6;
+}
+
+.filter-form label:active {
+	opacity: 1;
+}
+
+
+/* 3.4.4 Сортировка */
+
+.sort-controls {
+	text-align: right;
+}
+
+.sort-controls-item {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.sort-up,
+.sort-down {
+	display: block;
+	width: 0; 
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+.sort-down {
+	transform: rotate(180deg);
+	border-bottom: 10px solid rgba(0, 0, 0, 1);
+}
+
+/*  3.4.5 Каталог */
+
+.catalog-item-picture {
+	position: relative;
+}
+
+.catalog-item-hover {
+	z-index: -1;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(238, 238, 238, 0.7);
+	text-align: center;
+}
+
+.catalog-item-hover a {
+	display: inline-block;
+	width: 200px;
+}
+
+.catalog-item-btn {
+	margin-top: 50%;
+}
+
+.catalog-item:hover .catalog-item-hover {
+	z-index: 1;
+}
+
+.catalog-item-new .catalog-item-picture::after {
+	content: "new";
+	position: absolute;
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 900;
+	font-size: 14px;
+	line-height: 61px;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.2);
+	text-align: center;
+	top: 29px;
+	right: 27px;
+	width: 60px;
+	height: 61px;
+	background-color: transparent;
+	border-radius: 50%;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.pagination {
+	position: relative;
+	min-height: 70px;
+}
+
+.pagination-btn {
+	position: absolute;
+	top: 0;
+	padding: 25px 30px;
+	cursor: pointer;
+}
+
+.pagination-btn.disabled,
+.pagination-btn.disabled:hover,
+.pagination-btn.disabled:focus,
+.pagination-btn.disabled:active {
+	background-color: transparent;
+	color: rgba(0, 0, 0, 0.2);
+	cursor: default;
+}
+
+.pagination-btn-prev {
+	left: 0;
+}
+
+.pagination-btn-next {
+	right: 0;
+}
+
+.pagination-item a {
+	display: inline-block;
+	padding: 25px 12px;
+}
+
 
 /*  3.5 Декоративные элементы формы обратной связи */
 
