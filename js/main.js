@@ -1,3 +1,27 @@
+var secondary = document.querySelector(".secondary-menu-container");
+var secondaryClose1 = document.querySelector(".user-actions-item:last-child a");
+var secondaryOpen1 = document.querySelector(".main-navigation-item:first-child a");
+var secondaryClose2 = document.querySelector(".main-navigation-item:nth-child(2) a");
+var secondaryOpen2 = document.querySelector(".secondary-menu-list:last-child .secondary-menu-item:last-child a");
+
+	secondaryOpen1.addEventListener("focus", function(event) {
+		event.preventDefault();
+		secondary.classList.add("secondary-show");
+	});
+	secondaryOpen2.addEventListener("focus", function(event) {
+		event.preventDefault();
+		secondary.classList.add("secondary-show");
+	});
+
+	secondaryClose1.addEventListener("focus", function(event) {
+		event.preventDefault();
+		secondary.classList.remove("secondary-show");
+	});
+	secondaryClose2.addEventListener("focus", function(event) {
+		event.preventDefault();
+		secondary.classList.remove("secondary-show");
+	});
+
 var slider = document.querySelector(".promo-slider");
 var services = document.querySelector(".services");
 var slide1 = slider.querySelector(".promo-slides-item:nth-child(1)");
@@ -12,9 +36,6 @@ var slide6 = services.querySelector(".service-item:nth-child(3)");
 var control4 = services.querySelector(".service-buttons > li:nth-child(1) > .service-btn");
 var control5 = services.querySelector(".service-buttons > li:nth-child(2) > .service-btn");
 var control6 = services.querySelector(".service-buttons > li:nth-child(3) > .service-btn");
-
-
-
 
 	control1.addEventListener("click", function(event) {
 		event.preventDefault();
@@ -87,3 +108,85 @@ var control6 = services.querySelector(".service-buttons > li:nth-child(3) > .ser
 			control4.classList.remove("service-btn-current");
 		}
 	});
+
+var feedbackOpen = document.querySelector(".contacts-btn");
+var feedback = document.querySelector(".modal-feedback");
+var feedbackClose = feedback.querySelector(".btn-close");
+var feedbackName = feedback.querySelector("#name");
+var feedbackMail = feedback.querySelector("#mail");
+var feedbackText = feedback.querySelector("#text");
+var feedbackForm = feedback.querySelector(".feedback-form");
+var feedbackStorageName = localStorage.getItem("name");
+var feedbackStorageMail = localStorage.getItem("mail");
+var mapOpen = document.querySelector(".contacts-map");
+var map = document.querySelector(".modal-map");
+var mapClose = map.querySelector(".btn-close");
+var overlay = document.querySelector(".modal-overlay");
+
+
+	feedbackOpen.addEventListener("click", function(event) {
+		event.preventDefault();
+		overlay.classList.add("overlay-show");
+		feedback.classList.add("modal-content-show");
+		if (feedbackStorageName) {
+			feedbackName.value = feedbackStorageName;
+			if (feedbackStorageMail) {
+				feedbackMail.value = feedbackStorageMail;
+				feedbackText.focus();
+			} else {
+				feedbackMail.focus();
+			}
+				} 
+																else {
+					feedbackName.focus();
+				}
+	});
+
+	feedbackClose.addEventListener("click", function(event) {
+		event.preventDefault();
+		feedback.classList.remove("modal-content-show");
+		feedback.classList.remove("modal-error");
+		overlay.classList.remove("overlay-show");
+	});
+
+	feedbackForm.addEventListener("submit", function(event) {
+		if (!feedbackName.value || !feedbackMail.value) {
+			event.preventDefault();
+			feedback.classList.remove("modal-error");
+			feedback.offsetWidth = feedback.offsetWidth;
+			feedback.classList.add("modal-error");
+		} else {
+			localStorage.setItem("name", feedbackName.value);
+			localStorage.setItem("mail", feedbackMail.value);
+		}
+		
+		
+	});
+
+	window.addEventListener("keydown", function(event) {
+		if (event.keyCode === 27) {
+				if (feedback.classList.contains("modal-content-show")) {
+					feedback.classList.remove("modal-content-show");
+					feedback.classList.remove("modal-error");
+					overlay.classList.remove("overlay-show");
+		};
+				if (map.classList.contains("modal-map-show")) {
+					map.classList.remove("modal-map-show");
+					overlay.classList.remove("overlay-show");
+		}
+				}
+	});
+
+	mapOpen.addEventListener("click", function(event) {
+		event.preventDefault();
+		overlay.classList.add("overlay-show");
+		map.classList.add("modal-map-show");
+	});
+	
+	mapClose.addEventListener("click", function(event) {
+		event.preventDefault();
+		map.classList.remove("modal-map-show");
+		overlay.classList.remove("overlay-show");
+	});
+
+	
